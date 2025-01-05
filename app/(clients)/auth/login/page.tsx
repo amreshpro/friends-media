@@ -44,7 +44,7 @@ export default function Login() {
             required
           />
         </div>
-        <Button type="submit" variant={"outline"}>Login</Button>
+        <Button type="submit" variant={"default"}>Login</Button>
         <div className="mt-2">Create an account <Link href={"/auth/signup"} className="text-blue-600 underline"> Signup</Link></div>
 
       </form>

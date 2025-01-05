@@ -53,7 +53,7 @@ export default function Signup() {
             required
           />
         </div>
-        <Button type="submit" variant={"outline"}>
+        <Button type="submit" variant={"default"}>
           Sign Up
         </Button>
         <div className="mt-2">
