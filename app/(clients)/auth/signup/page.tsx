@@ -16,13 +16,14 @@ export default function Signup() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const success = await signupUser({ name,email, password });
+    const success = await signupUser({ name, email, password });
     if (success) router.push("/auth/login");
   };
 
   return (
     <div className="flex justify-center items-center min-h-screen">
       <form
+        method="post"
         onSubmit={handleSubmit}
         className="p-6  rounded shadow-md max-w-sm w-full"
       >
@@ -52,8 +53,15 @@ export default function Signup() {
             required
           />
         </div>
-        <Button type="submit" variant={"outline"}>Sign Up</Button>
-        <div className="mt-2">You already have an account <Link href={"/auth/login"} className="text-blue-600 underline">Login</Link></div>
+        <Button type="submit" variant={"outline"}>
+          Sign Up
+        </Button>
+        <div className="mt-2">
+          You already have an account{" "}
+          <Link href={"/auth/login"} className="text-blue-600 underline">
+            Login
+          </Link>
+        </div>
       </form>
     </div>
   );
